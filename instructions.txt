@@ -1,0 +1,40 @@
+Since you already installed Python 3.13, let's make a fresh virtual environment.
+
+You're currently in the correct folder:
+
+C:\Users\maks\Python projects\Pygame
+1. Create the environment
+
+Run:
+
+py -3.13 -m venv .venv
+
+Wait for it to finish.
+
+2. Activate it
+
+In PowerShell, use:
+
+.\.venv\Scripts\Activate.ps1
+
+Notice the .\ at the beginning.
+
+You should then see:
+
+(.venv) PS C:\Users\maks\Python projects\Pygame>
+3. Install Pygame and PyInstaller
+python -m pip install pygame pyinstaller
+4. Build your game
+python -m PyInstaller --onefile --windowed --add-data "back.jpg;." app.py
+
+Then look inside:
+
+Pygame
+└── dist
+    └── app.exe
+
+That's the file you can send to your friend.
+
+If PowerShell blocks activation
+
+If you get an error like "running scripts is disabled on this system", don't change anything yet. Just show me that error — there's an easy alternative that doesn't require changing your PowerShell security settings.
